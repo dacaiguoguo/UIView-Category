@@ -3,13 +3,9 @@ UIView-Category
 
  UIView Category
  some category help you!
-UIView-Category
-===============
-
- UIView Category
- some category help you!
  
 Questions
+================
 Send me a sina weibo @大菜果果 - I'd love to hear how you get on with this.
 
 License
