@@ -13,8 +13,12 @@ typedef void (^SearchResult)(NSString *searchWord,NSUInteger indx, BOOL isFound)
 - (NSArray *)sortArray;
 // 在查找前请确定是有序的数组，可执行sortArray进行排序
 - (NSInteger)binarySearchingArray:(NSString *)something;
-- (void)binarySearchingArray:(NSString *)something callBack:(SearchResult)aCallBack;
 - (NSInteger)binarySearchingArrayFirstEqual:(NSString *)something;
 - (NSInteger)binarySearchingArrayLastEqual:(NSString *)something;
 - (NSInteger)binarySearchingArrayInsertionIndex:(NSString *)something;
+//没有返回值，用callback block 回传信息
+- (void)binarySearchingArray:(NSString *)something callBack:(SearchResult)aCallBack;
+- (void)binarySearchingArrayFirstEqual:(NSString *)something callBack:(SearchResult)aCallBack;
+- (void)binarySearchingArrayLastEqual:(NSString *)something callBack:(SearchResult)aCallBack;
+- (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(SearchResult)aCallBack;
 @end

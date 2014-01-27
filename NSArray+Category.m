@@ -25,11 +25,6 @@
     return [self binarySearchingArrayFirstEqual:something];
 }
 
-- (void)binarySearchingArray:(NSString *)something callBack:(SearchResult)aCallBack{
-    NSInteger findIndx = [self binarySearchingArrayFirstEqual:something];
-    aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
-}
-
 - (NSInteger)binarySearchingArrayFirstEqual:(NSString *)something{
     return [self indexOfObject:something inSortedRange:NSMakeRange(0, self.count) options:NSBinarySearchingFirstEqual usingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [obj1 localizedStandardCompare:obj2];
@@ -46,6 +41,26 @@
     return [self indexOfObject:something inSortedRange:NSMakeRange(0, self.count) options:NSBinarySearchingInsertionIndex usingComparator:^NSComparisonResult(id obj1, id obj2) {
         return [obj1 localizedStandardCompare:obj2];
     }];
+}
+
+- (void)binarySearchingArray:(NSString *)something callBack:(SearchResult)aCallBack{
+    NSInteger findIndx = [self binarySearchingArrayFirstEqual:something];
+    aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
+}
+
+- (void)binarySearchingArrayFirstEqual:(NSString *)something callBack:(SearchResult)aCallBack{
+    NSInteger findIndx = [self binarySearchingArrayFirstEqual:something];
+    aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
+}
+
+- (void)binarySearchingArrayLastEqual:(NSString *)something callBack:(SearchResult)aCallBack{
+    NSInteger findIndx = [self binarySearchingArrayLastEqual:something];
+    aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
+}
+
+- (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(SearchResult)aCallBack{
+    NSInteger findIndx = [self binarySearchingArrayInsertionIndex:something];
+    aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
 }
 
 @end
