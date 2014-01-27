@@ -3,7 +3,7 @@
 //  LvmmPad
 //
 //  Created by dacaiguoguo on 14-1-23.
-//  Copyright (c) 2014年 zhouyi. All rights reserved.
+//  Copyright (c) 2014年 dacaiguoguo. All rights reserved.
 //
 
 #import "UIView+YGLoadViewFromXib.h"
