@@ -58,9 +58,9 @@
     aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
 }
 
-- (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(SearchResult)aCallBack{
+- (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(InsertionResult)aCallBack{
     NSInteger findIndx = [self binarySearchingArrayInsertionIndex:something];
-    aCallBack ? aCallBack(something,findIndx,findIndx==NSNotFound):NULL;
+    aCallBack ? aCallBack(something,findIndx):NULL;
 }
 
 @end

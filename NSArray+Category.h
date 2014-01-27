@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 typedef void (^SearchResult)(NSString *searchWord,NSUInteger indx, BOOL isFound);
+typedef void (^InsertionResult)(NSString *insertionWord,NSUInteger indx);
+
 @interface NSArray (Category)
 - (NSArray *)reverseArray;
 - (NSArray *)sortArray;
@@ -20,5 +22,5 @@ typedef void (^SearchResult)(NSString *searchWord,NSUInteger indx, BOOL isFound)
 - (void)binarySearchingArray:(NSString *)something callBack:(SearchResult)aCallBack;
 - (void)binarySearchingArrayFirstEqual:(NSString *)something callBack:(SearchResult)aCallBack;
 - (void)binarySearchingArrayLastEqual:(NSString *)something callBack:(SearchResult)aCallBack;
-- (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(SearchResult)aCallBack;
+- (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(InsertionResult)aCallBack;
 @end
