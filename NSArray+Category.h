@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void (^SearchResult)(NSString *searchWord,NSUInteger indx, BOOL isFound);
-typedef void (^InsertionResult)(NSString *insertionWord,NSUInteger indx);
+
 
 @interface NSArray (Category)
 - (NSArray *)reverseArray;
@@ -19,8 +18,12 @@ typedef void (^InsertionResult)(NSString *insertionWord,NSUInteger indx);
 - (NSInteger)binarySearchingArrayLastEqual:(NSString *)something;
 - (NSInteger)binarySearchingArrayInsertionIndex:(NSString *)something;
 //没有返回值，用callback block 回传信息
+#if NS_BLOCKS_AVAILABLE
+typedef void (^SearchResult)(NSString *searchWord,NSUInteger indx, BOOL isFound);
+typedef void (^InsertionResult)(NSString *insertionWord,NSUInteger indx);
 - (void)binarySearchingArray:(NSString *)something callBack:(SearchResult)aCallBack;
 - (void)binarySearchingArrayFirstEqual:(NSString *)something callBack:(SearchResult)aCallBack;
 - (void)binarySearchingArrayLastEqual:(NSString *)something callBack:(SearchResult)aCallBack;
 - (void)binarySearchingArrayInsertionIndex:(NSString *)something callBack:(InsertionResult)aCallBack;
+#endif
 @end
