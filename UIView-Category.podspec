@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "UIView-Category"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = " UIView Category"
 
   s.description  = <<-DESC
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.author       = { "dacaiguoguo" => "dacaiguoguo@163.com" }
   s.platform     = :ios, '5.0'
   s.ios.deployment_target = '5.0'
-  s.source       = { :git => "https://github.com/dacaiguoguo/UIView-Category.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/dacaiguoguo/UIView-Category.git", :tag => "1.0.1" }
   s.source_files  = 'CustomView/*.{h,m}'
 end
